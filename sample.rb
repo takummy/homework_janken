@@ -19,8 +19,6 @@ class Janken
   def pon(player_hand, enemy_hand)
     if player_hand < 0 || player_hand > 2
       puts "注:入力できる数字は0~2です!"
-      player = Player.new
-      enemy = Enemy.new
       self.again
     elsif (player_hand - enemy_hand + 3) % 3 == 2
       puts "相手は#{enemy_hand}です。あなたの勝ちです。"
